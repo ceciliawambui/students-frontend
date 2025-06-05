@@ -7,7 +7,7 @@ function CreateStudent() {
    const [grade, setGrade] = useState('');
 
    const handleSubmit = ()=> {
-       fetch('http://127.0.0.1:8000/api/students/', {
+       fetch('https://students-backend-o3qk.onrender.com/api/students/', {
            method: 'POST',
            headers: {
                'Content-Type': 'application/json',

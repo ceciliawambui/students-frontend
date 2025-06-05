@@ -8,7 +8,7 @@ function StudentList() {
    }, []);
 
    const fetchStudents = async () => {
-       const response = await fetch('http://localhost:8000/api/students/');
+       const response = await fetch('https://students-backend-o3qk.onrender.com/api/students/');
        const data = await response.json();
        setStudents(data);
    };
@@ -20,7 +20,7 @@ function StudentList() {
 
    const deleteStudent = async (id) => {
        try {
-           await fetch(`http://localhost:8000/api/students/${id}/`, {
+           await fetch(`https://students-backend-o3qk.onrender.com/api/students/${id}/`, {
                method: 'DELETE',
            });
            // Refresh the list of students after deleting

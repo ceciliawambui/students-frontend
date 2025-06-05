@@ -10,7 +10,7 @@ function EditStudent() {
  const [grade, setGrade] = useState('');
 
  useEffect(() => {
-   fetch(`http://127.0.0.1:8000/api/students/${id}/`)
+   fetch(`https://students-backend-o3qk.onrender.com/api/students/${id}/`)
      .then(response => response.json())
      .then(data => {
        setName(data.name);
@@ -22,7 +22,7 @@ function EditStudent() {
 
  const handleSubmit = async (e) => {
    e.preventDefault();
-   await fetch(`http://127.0.0.1:8000/api/students/${id}/`, {
+   await fetch(`https://students-backend-o3qk.onrender.com/api/students/${id}/`, {
      method: 'PUT',
      headers: {
        'Content-Type': 'application/json',
